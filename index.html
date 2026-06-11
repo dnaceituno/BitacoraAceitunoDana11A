@@ -16,7 +16,7 @@
             display: flex;
             flex-direction: column;
             text-align: center;
-            background-color: #f5f5f5; /* Un fondo gris claro hace resaltar las tarjetas */
+            background-color: #f5f5f5;
         }
         header{
             padding: 20px;
@@ -24,7 +24,6 @@
             color: white;
         }
         h1 {
-            /* Sombra morada neón corregida */
             text-shadow: 0 0 10px #a020f0, 
                          0 0 20px #a020f0, 
                          0 0 40px #a020f0;
@@ -83,41 +82,40 @@
 </head>
 <body>
     <header>
-        <h1>Bitácora Segunda y Tecera unidad</h1>
+        <h1>Bitácora Segunda y Tercera unidad</h1>
     </header>
     
     <main>
         <h4>Contenido de la Página Web</h4>
 
-        <!-- Semana 1 -->
+        <!-- Semana 1 (Primera Unidad / Introducción) -->
         <div class="semana">
             <h3>Semana 1: Introducción a Arduino</h3>
             <p>Haz clic abajo para visualizar el material completo de la unidad:</p>
             
             <div style="margin-top: 15px;">
-                <!-- CORREGIDO: Ahora apunta a la carpeta del proyecto, no a tu PC -->
-                <iframe src="recursos/Introducción Arduino .pdf" width="100%" height="500px" style="border: none; border-radius: 8px;">
+                <!-- Ajustado con el espacio exacto que se ve en tu imagen -->
+                <iframe src="recursos/Introducción Arduino.pdf" width="100%" height="500px" style="border: none; border-radius: 8px;">
                     <p>Tu navegador no admite el visor de PDF. 
-                    <a href="recursos/Introducción Arduino .pdf">Haz clic aquí para descargar el archivo.</a>
+                    <a href="recursos/Introducción Arduino.pdf">Haz clic aquí para descargar el archivo.</a>
                     </p>
                 </iframe>
             </div>
 
             <div style="margin-top: 15px; text-align: center;">
-                <a href="recursos/Introducción Arduino .pdf" download style="text-decoration: none; background-color: #a020f0; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+                <a href="recursos/Introducción Arduino.pdf" download style="text-decoration: none; background-color: #a020f0; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
                     Descargar PDF
                 </a>
             </div>
         </div>
 
-        <!-- Semana 2: Tinkercad -->
+        <!-- Semana 2 (Primera Unidad / Tinkercad) -->
         <div class="semana">
             <h3>Semana 2: Diseño de Circuitos en Tinkercad</h3>
             <p>En esta sesión pusimos en práctica los conceptos de Arduino mediante una simulación de semáforo con LEDs y resistencias.</p>
             
             <div class="video-container">
                 <video controls>
-                    <!-- CORREGIDO: Cambiado a recursos/ para mantener orden en GitHub -->
                     <source src="recursos/dana.mp4" type="video/mp4">
                     Tu navegador no soporta videos HTML5.
                 </video>
@@ -127,9 +125,28 @@
             </p>
         </div>
 
-        <!-- Semana 2: Circuito RGB Físico -->
+        <!-- REORDENADO: AHORA ESTA VA PRIMERO -->
+        <!-- Semana 1 de Segunda Unidad -->
         <div class="semana">
-            <h3>Semana 2: Diseño y Prueba del Semáforo RGB (Físico)</h3>
+            <h3>Semana 1 - Segunda Unidad: Armado de Circuito en Físico</h3>
+            <p>¡Del simulador a la realidad! En esta semana trasladamos el diseño de Tinkercad a los componentes reales, conectando la placa Arduino Uno a la computadora y armando el circuito en el protoboard.</p>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="recursos/circuito_fisico.jpg" alt="Circuito físico con Arduino" style="max-width: 100%; height: auto; max-height: 450px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+            </div>
+
+            <h4>Logros de la sesión:</h4>
+            <ul>
+                <li>Conexión física de la placa Arduino Uno mediante el cable USB.</li>
+                <li>Uso correcto del protoboard para energizar el circuito.</li>
+                <li>Instalación de una resistencia para proteger el LED verde y evitar que se queme.</li>
+            </ul>
+        </div>
+
+        <!-- REORDENADO: EL SEMÁFORO RGB QUEDA AL ÚLTIMO -->
+        <!-- Semana 2 de Segunda Unidad -->
+        <div class="semana">
+            <h3>Semana 2 - Segunda Unidad: Diseño y Prueba del Semáforo RGB</h3>
             <p>En esta sesión trabajamos en la lógica de programación y el flujo de energía para lograr una secuencia automatizada de luces en nuestra placa Arduino Uno.</p>
             
             <h4 style="color: #a020f0; margin-top: 20px;">▶️ Evidencia del Circuito Físico:</h4>
@@ -147,28 +164,11 @@
                 <li><strong>Protección:</strong> Cada línea cuenta con su resistencia para asegurar que los componentes no reciban un voltaje dañino.</li>
             </ul>
         </div>
-
-        <!-- Semana 3: Foto Fijo -->
-        <div class="semana">
-            <h3>Semana 3: Armado de Circuito en Físico</h3>
-            <p>¡Del simulador a la realidad! En esta semana trasladamos el diseño de Tinkercad a los componentes reales, conectando la placa Arduino Uno a la computadora y armando el circuito en el protoboard.</p>
-            
-            <div style="text-align: center; margin: 20px 0;">
-                <img src="recursos/circuito_fisico.jpg" alt="Circuito físico con Arduino" style="max-width: 100%; height: auto; max-height: 450px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-            </div>
-
-            <h4>Logros de la sesión:</h4>
-            <ul>
-                <li>Conexión física de la placa Arduino Uno mediante el cable USB.</li>
-                <li>Uso correcto del protoboard para energizar el circuito.</li>
-                <li>Instalación de una resistencia para proteger el LED verde y evitar que se queme.</li>
-            </ul>
-        </div>
     </main>
 
     <footer>
         <span>d.aceituno</span>
         <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" height="30" width="140">
-    </footer> <!-- CORREGIDO: El </html> se quitó de aquí adentro -->
+    </footer>
 </body>
-</html> <!-- CORREGIDO: El cierre va en la última línea -->
+</html>
