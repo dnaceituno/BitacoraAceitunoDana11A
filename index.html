@@ -6,7 +6,7 @@
     <title>Bitácora Dana Aceituno</title>
     <link rel="icon" type="image/png" href="recursos/amarillo0.png">
     <style>
-        /*CSS-Diseño, configurar en cascada (Esto sí es un lenguaje de progra)*/
+        /*CSS-Diseño, configurar en cascada*/
         html, body{
             height: 100%;
             margin: 0;
@@ -16,6 +16,7 @@
             display: flex;
             flex-direction: column;
             text-align: center;
+            background-color: #f5f5f5; /* Un fondo gris claro hace resaltar las tarjetas */
         }
         header{
             padding: 20px;
@@ -23,17 +24,16 @@
             color: white;
         }
         h1 {
-    /* Sombra morada neón: 0 de movimiento, 15px de brillo */
-    text-shadow: 0 0 10px #68cd80, 
-            0 0 20px #68cd80, 
-            0 0 40px #68cd80;
-}
+            /* Sombra morada neón corregida */
+            text-shadow: 0 0 10px #a020f0, 
+                         0 0 20px #a020f0, 
+                         0 0 40px #a020f0;
+        }
         main{
             flex: 1;
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
-            
         }
         footer{
             display: flex;
@@ -44,130 +44,131 @@
             background-color: rgb(168, 241, 195);
         }
         footer img {
-    /* Tiempo que tarda en crecer (0.3 segundos) */
-    transition: transform 0.3s ease; 
-    cursor: pointer; /* Cambia la flecha por una manita */
-}
-
-footer img:hover {
-    /* 1.1 significa que crece un 10% de su tamaño original */
-    transform: scale(1.1); 
-}
-.semana {
-    background-color: white; /* Fondo blanco para que resalte */
-    border-radius: 12px;     /* Bordes redondeados modernos */
-    padding: 25px;           /* Espacio interno para que el texto respire */
-    margin-bottom: 30px;    /* Espacio entre una tarjeta y otra */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    border-left: 5px solid #a020f0; /* Una línea lateral del color de tu neón */
-    text-align: left;        /* El texto se lee mejor alineado a la izquierda */
-    transition: transform 0.2s; /* Para que también tenga un pequeño efecto */
-}
-
-.semana:hover {
-    transform: translateY(-5px); /* Se eleva un poquito al pasar el mouse */
-}
-    .video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
-    height: 0;
-    overflow: hidden;
-    border-radius: 8px;
-    margin-top: 15px;
-}
-
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-}
+            transition: transform 0.3s ease; 
+            cursor: pointer;
+        }
+        footer img:hover {
+            transform: scale(1.1); 
+        }
+        .semana {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #a020f0;
+            text-align: left;
+            transition: transform 0.2s;
+        }
+        .semana:hover {
+            transform: translateY(-5px);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Bitácora Segunda y Tecera unidad</h1>
     </header>
+    
     <main>
         <h4>Contenido de la Página Web</h4>
 
-    <div class="semana">
-    <h3>Semana 1: Introducción a Arduino</h3>
-    <p>Haz clic abajo para visualizar el material completo de la unidad:</p>
-    
-    <div style="margin-top: 15px;">
-        <iframe src="c:\Users\Alumno Capouilliez\Documents\Aceituno11A\Introducción Arduino .pdf" width="100%" height="500px" style="border: none; border-radius: 8px;">
-            <p>Tu navegador no admite el visor de PDF. 
-            <a href="c:\Users\Alumno Capouilliez\Documents\Aceituno11A\Introducción Arduino .pdf">Haz clic aquí para descargar el archivo.</a>
-            </p>
-        </iframe>
-    </div>
-
-    <div style="margin-top: 15px; text-align: center;">
-        <a href="recursos/Introducción Arduino .pdf" download style="text-decoration: none; background-color: #a020f0; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
-            Descargar PDF
-        </a>
-    </div>
-</div>
-
-    <div class="semana">
-    <h3>Semana 2: Diseño de Circuitos en Tinkercad</h3>
-    <p>En esta sesión pusimos en práctica los conceptos de Arduino mediante una simulación de semáforo con LEDs y resistencias.</p>
-    
-    <div class="video-container">
-        <video controls>
-            <source src="dana.mp4" type="video/mp4">
-            Tu navegador no soporta videos HTML5.
-        </video>
-    </div>
-
-    <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">
-        <em>Nota: En el video se observa el funcionamiento del circuito y la secuencia de encendido de los componentes.</em>
-    </p>
-</div>
-
-        <!-- Tarjeta de la Semana 3: Circuito en Físico -->
-<div class="semana">
-    <h3>Semana 3: Armado de Circuito en Físico</h3>
-    <p>¡Del simulador a la realidad! En esta semana trasladamos el diseño de Tinkercad a los componentes reales, conectando la placa Arduino Uno a la computadora y armando el circuito en el protoboard.</p>
-    
-    <!-- Contenedor para la imagen centrada y estética -->
-    <div style="text-align: center; margin: 20px 0;">
-        <img src="recursos/circuito_fisico.jpg" alt="Circuito físico con Arduino" style="max-width: 100%; height: auto; max-height: 450px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-    </div>
-
-    <h4>Logros de la sesión:</h4>
-    <ul>
-        <li>Conexión física de la placa Arduino Uno mediante el cable USB.</li>
-        <li>Uso correcto del protoboard para energizar el circuito.</li>
-        <li>Instalación de una resistencia para proteger el LED verde y evitar que se queme.</li>
-    </ul>
-</div>
+        <!-- Semana 1 -->
         <div class="semana">
-    <h3>Semana 2: Diseño y Prueba del Semáforo RGB</h3>
-    <p>En esta sesión trabajamos en la lógica de programación y el flujo de energía para lograr una secuencia automatizada de luces en nuestra placa Arduino Uno.</p>
-    
-    <h4 style="color: #a020f0; margin-top: 20px;">▶️ Evidencia del Circuito Físico:</h4>
-    <div class="video-container">
-        <video controls>
-            <source src="recursos/proyecto_colores.mp4" type="video/mp4">
-            Tu navegador no soporta videos HTML5.
-        </video>
-    </div>
+            <h3>Semana 1: Introducción a Arduino</h3>
+            <p>Haz clic abajo para visualizar el material completo de la unidad:</p>
+            
+            <div style="margin-top: 15px;">
+                <!-- CORREGIDO: Ahora apunta a la carpeta del proyecto, no a tu PC -->
+                <iframe src="recursos/Introducción Arduino .pdf" width="100%" height="500px" style="border: none; border-radius: 8px;">
+                    <p>Tu navegador no admite el visor de PDF. 
+                    <a href="recursos/Introducción Arduino .pdf">Haz clic aquí para descargar el archivo.</a>
+                    </p>
+                </iframe>
+            </div>
 
-    <h4 style="margin-top: 25px;">¿Cómo funciona el circuito?</h4>
-    <ul>
-        <li><strong>Secuencia de Pines:</strong> El código envía señales digitales para activar secuencialmente los colores (Rojo 🔴, Azul 🔵, y Verde 🟢).</li>
-        <li><strong>Temporización:</strong> Se utiliza la función <code>delay()</code> en la programación para mantener cada luz encendida durante un tiempo específico antes de pasar a la siguiente.</li>
-        <li><strong>Protección:</strong> Cada línea de corriente cuenta con su respectiva resistencia en el protoboard para asegurar que los componentes no reciban un voltaje dañino.</li>
-    </ul>
-</div>
+            <div style="margin-top: 15px; text-align: center;">
+                <a href="recursos/Introducción Arduino .pdf" download style="text-decoration: none; background-color: #a020f0; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+                    Descargar PDF
+                </a>
+            </div>
+        </div>
+
+        <!-- Semana 2: Tinkercad -->
+        <div class="semana">
+            <h3>Semana 2: Diseño de Circuitos en Tinkercad</h3>
+            <p>En esta sesión pusimos en práctica los conceptos de Arduino mediante una simulación de semáforo con LEDs y resistencias.</p>
+            
+            <div class="video-container">
+                <video controls>
+                    <!-- CORREGIDO: Cambiado a recursos/ para mantener orden en GitHub -->
+                    <source src="recursos/dana.mp4" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
+                </video>
+            </div>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+                <em>Nota: En el video se observa el funcionamiento del circuito y la secuencia de encendido de los componentes.</em>
+            </p>
+        </div>
+
+        <!-- Semana 2: Circuito RGB Físico -->
+        <div class="semana">
+            <h3>Semana 2: Diseño y Prueba del Semáforo RGB (Físico)</h3>
+            <p>En esta sesión trabajamos en la lógica de programación y el flujo de energía para lograr una secuencia automatizada de luces en nuestra placa Arduino Uno.</p>
+            
+            <h4 style="color: #a020f0; margin-top: 20px;">▶️ Evidencia del Circuito Físico:</h4>
+            <div class="video-container">
+                <video controls>
+                    <source src="recursos/proyecto_colores.mp4" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
+                </video>
+            </div>
+
+            <h4 style="margin-top: 25px;">¿Cómo funciona el circuito?</h4>
+            <ul>
+                <li><strong>Secuencia de Pines:</strong> El código envía señales digitales para activar secuencialmente los colores (Rojo 🔴, Azul 🔵, y Verde 🟢).</li>
+                <li><strong>Temporización:</strong> Se utiliza la función <code>delay()</code> en la programación para mantener cada luz encendida.</li>
+                <li><strong>Protección:</strong> Cada línea cuenta con su resistencia para asegurar que los componentes no reciban un voltaje dañino.</li>
+            </ul>
+        </div>
+
+        <!-- Semana 3: Foto Fijo -->
+        <div class="semana">
+            <h3>Semana 3: Armado de Circuito en Físico</h3>
+            <p>¡Del simulador a la realidad! En esta semana trasladamos el diseño de Tinkercad a los componentes reales, conectando la placa Arduino Uno a la computadora y armando el circuito en el protoboard.</p>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="recursos/circuito_fisico.jpg" alt="Circuito físico con Arduino" style="max-width: 100%; height: auto; max-height: 450px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+            </div>
+
+            <h4>Logros de la sesión:</h4>
+            <ul>
+                <li>Conexión física de la placa Arduino Uno mediante el cable USB.</li>
+                <li>Uso correcto del protoboard para energizar el circuito.</li>
+                <li>Instalación de una resistencia para proteger el LED verde y evitar que se queme.</li>
+            </ul>
+        </div>
     </main>
+
     <footer>
         <span>d.aceituno</span>
         <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" height="30" width="140">
-</html>
-    </footer>
+    </footer> <!-- CORREGIDO: El </html> se quitó de aquí adentro -->
 </body>
+</html> <!-- CORREGIDO: El cierre va en la última línea -->
