@@ -88,13 +88,12 @@
     <main>
         <h4>Contenido de la Página Web</h4>
 
-        <!-- Semana 1 (Primera Unidad / Introducción) -->
+        <!-- Introducción -->
         <div class="semana">
-            <h3>Semana 1: Introducción a Arduino</h3>
+            <h3>Introducción a Arduino</h3>
             <p>Haz clic abajo para visualizar el material completo de la unidad:</p>
             
             <div style="margin-top: 15px;">
-                <!-- Ajustado con el espacio exacto que se ve en tu imagen -->
                 <iframe src="recursos/Introducción Arduino.pdf" width="100%" height="500px" style="border: none; border-radius: 8px;">
                     <p>Tu navegador no admite el visor de PDF. 
                     <a href="recursos/Introducción Arduino.pdf">Haz clic aquí para descargar el archivo.</a>
@@ -109,9 +108,9 @@
             </div>
         </div>
 
-        <!-- Semana 2 (Primera Unidad / Tinkercad) -->
+        <!-- Semana 1 -->
         <div class="semana">
-            <h3>Semana 2: Diseño de Circuitos en Tinkercad</h3>
+            <h3>Semana 1: Diseño de Circuitos en Tinkercad</h3>
             <p>En esta sesión pusimos en práctica los conceptos de Arduino mediante una simulación de semáforo con LEDs y resistencias.</p>
             
             <div class="video-container">
@@ -125,10 +124,9 @@
             </p>
         </div>
 
-        <!-- REORDENADO: AHORA ESTA VA PRIMERO -->
-        <!-- Semana 1 de Segunda Unidad -->
+        <!-- Semana 2 -->
         <div class="semana">
-            <h3>Semana 1 - Segunda Unidad: Armado de Circuito en Físico</h3>
+            <h3>Semana 2: Armado de Circuito en Físico</h3>
             <p>¡Del simulador a la realidad! En esta semana trasladamos el diseño de Tinkercad a los componentes reales, conectando la placa Arduino Uno a la computadora y armando el circuito en el protoboard.</p>
             
             <div style="text-align: center; margin: 20px 0;">
@@ -143,31 +141,9 @@
             </ul>
         </div>
 
-        <!-- REORDENADO: EL SEMÁFORO RGB QUEDA AL ÚLTIMO -->
-        <!-- Semana 2 de Segunda Unidad -->
+        <!-- Semana 3 -->
         <div class="semana">
-            <h3>Semana 2 - Segunda Unidad: Diseño y Prueba del Semáforo RGB</h3>
-            <p>En esta sesión trabajamos en la lógica de programación y el flujo de energía para lograr una secuencia automatizada de luces en nuestra placa Arduino Uno.</p>
-            
-            <h4 style="color: #a020f0; margin-top: 20px;">▶️ Evidencia del Circuito Físico:</h4>
-            <div class="video-container">
-                <video controls>
-                    <source src="recursos/proyecto_colores.mp4" type="video/mp4">
-                    Tu navegador no soporta videos HTML5.
-                </video>
-            </div>
-
-            <h4 style="margin-top: 25px;">¿Cómo funciona el circuito?</h4>
-            <ul>
-                <li><strong>Secuencia de Pines:</strong> El código envía señales digitales para activar secuencialmente los colores (Rojo 🔴, Azul 🔵, y Verde 🟢).</li>
-                <li><strong>Temporización:</strong> Se utiliza la función <code>delay()</code> en la programación para mantener cada luz encendida.</li>
-                <li><strong>Protección:</strong> Cada línea cuenta con su resistencia para asegurar que los componentes no reciban un voltaje dañino.</li>
-            </ul>
-        </div>
-        </div>
-
-        <div class="semana">
-            <h3>Semana 4 - Segunda Unidad: Optimización del Circuito en Tinkercad</h3>
+            <h3>Semana 3: Optimización del Circuito en Tinkercad</h3>
             <p>En esta sesión nos enfocamos en el perfeccionamiento y orden del cableado dentro del simulador, estructurando las conexiones del protoboard hacia los pines del Arduino de manera eficiente.</p>
             
             <div class="video-container">
@@ -185,8 +161,64 @@
             </ul>
         </div>
 
-    </main> <footer>
-        <span>d.aceituno</span>
+        <!-- Semana 4 -->
+        <div class="semana">
+            <h3>Semana 4: Prueba de Alimentación Simultánea de LEDs (Físico)</h3>
+            <p>En esta práctica conectamos un circuito de tres LEDs (Azul, Amarillo y Verde) al protoboard y verificamos el paso continuo de energía en simultáneo desde la placa Arduino Uno.</p>
+            
+            <div class="video-container">
+                <video controls>
+                    <source src="recursos/semaforo_fijo.mp4" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
+                </video>
+            </div>
+
+            <h4>Logros de la sesión:</h4>
+            <ul>
+                <li><strong>Circuito Multiled:</strong> Cableado directo para energizar tres LEDs en paralelo.</li>
+                <li><strong>Aislamiento y Protección:</strong> Uso de resistencias individuales en cada LED para estabilizar el paso de corriente.</li>
+            </ul>
+        </div>
+
+        <!-- Semana 5 -->
+        <div class="semana">
+            <h3>Semana 5: Programación de Secuencia de Semáforo (Físico)</h3>
+            <p>Implementación del código de control de tiempos para lograr un encendido y apagado progresivo entre los pines digitales, creando la secuencia automatizada del semáforo.</p>
+            
+            <div class="video-container">
+                <video controls>
+                    <source src="recursos/semaforo_secuencia.mp4" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
+                </video>
+            </div>
+
+            <h4>Logros de la sesión:</h4>
+            <ul>
+                <li><strong>Control de Tiempos:</strong> Programación de retrasos (<code>delay</code>) para alternar el encendido entre el LED azul, amarillo y verde.</li>
+                <li><strong>Verificación Físico-Digital:</strong> Validación de la lógica cargada desde la IDE de Arduino a la placa real.</li>
+            </ul>
+        </div>
+
+        <!-- Semana 6 -->
+        <div class="semana">
+            <h3>Semana 6: Sensor Ultrasónico de Distancia en Tinkercad</h3>
+            <p>En esta sesión simulamos un sistema de proximidad utilizando un sensor de ultrasonido HC-SR04 y LEDs indicadores que cambian de color según la cercanía del objeto.</p>
+            
+            <div class="video-container">
+                <video controls>
+                    <source src="recursos/sensor_distancia.mp4" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
+                </video>
+            </div>
+
+            <h4>Logros de la sesión:</h4>
+            <ul>
+                <li><strong>Lectura de Proximidad:</strong> Configuración de los pines <code>Trig</code> y <code>Echo</code> para calcular la distancia en centímetros.</li>
+                <li><strong>Lógica Condicional (If/Else):</strong> Programación del Arduino para activar el LED Rojo (cerca), Amarillo (distancia media) o Verde (lejos).</li>
+                <li><strong>Monitoreo Serial:</strong> Impresión de la distancia medida en tiempo real en la consola serial de Tinkercad.</li>
+            </ul>
+        </div>
+
     </main>
 
     <footer>
